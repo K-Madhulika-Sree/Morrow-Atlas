@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Morrow Atlas is a little window onto the world's visual stories."
+    />
+    <title>Morrow Atlas — Find your somewhere</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="masthead">
+      <a class="wordmark" href="#" aria-label="Morrow Atlas home">
+        <span class="wordmark-mark" aria-hidden="true">M</span>
+        <span>MORROW <span class="wordmark-light">ATLAS</span></span>
+      </a>
+      <p class="masthead-note">A field guide to the visual world</p>
+      <span class="edition">VOL. 01 <span aria-hidden="true">/</span> OPEN</span>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow"><span class="eyebrow-line"></span> YOUR NEXT RABBIT HOLE</p>
+        <h1 id="page-title">Find your <em>somewhere.</em></h1>
+        <p class="intro-copy">
+          A small search for the big, beautiful, and unexpected. What are you
+          curious about today?
+        </p>
+
+        <form class="search-form" id="search-form">
+          <label class="sr-only" for="search-input">Search for a topic</label>
+          <span class="search-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <circle cx="10.8" cy="10.8" r="6.8"></circle>
+              <path d="m16 16 4.2 4.2"></path>
+            </svg>
+          </span>
+          <input
+            id="search-input"
+            name="query"
+            type="search"
+            placeholder="Try “quiet beaches” or “city at night”…"
+            autocomplete="off"
+          />
+          <button id="search-button" type="submit">
+            Explore <span aria-hidden="true">↗</span>
+          </button>
+        </form>
+
+        <nav class="quick-picks" aria-label="Suggested searches">
+          <span class="quick-picks-label">A FEW PLACES TO START</span>
+          <button class="chip" type="button">Soft landscapes</button>
+          <button class="chip" type="button">Old bookstores</button>
+          <button class="chip" type="button">Ocean life</button>
+          <button class="chip" type="button">Faraway markets</button>
+        </nav>
+      </section>
+
+      <section class="discover" aria-labelledby="discover-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow section-eyebrow">THE OPEN INDEX</p>
+            <h2 id="discover-title">Your discoveries</h2>
+          </div>
+          <p class="result-count" id="result-count">A world waiting to be found</p>
+        </div>
+
+        <div class="results-grid" id="results" aria-live="polite"></div>
+        <div class="empty-state" id="empty-state">
+          <span class="empty-orbit" aria-hidden="true">
+            <span class="orbit-dot"></span>
+            <span class="orbit-center">?</span>
+          </span>
+          <p class="empty-title">The page is yours to fill.</p>
+          <p class="empty-copy">Search for a place, a feeling, or something you’ve never seen.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>MORROW ATLAS</span>
+      <span>Made for the curious <span aria-hidden="true">✳</span></span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
